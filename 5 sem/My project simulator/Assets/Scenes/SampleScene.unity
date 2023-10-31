@@ -393,6 +393,7 @@ MonoBehaviour:
   - {fileID: 1241239183}
   installationInfo: "\u0421\u0442\u043E\u0439\u043A\u0430, \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u0430\u044F
     \u0434\u043B\u044F \u043A\u0440\u0435\u043F\u043B\u0435\u043D\u0438\u044F \u043F\u0440\u043E\u0432\u043E\u0434\u043D\u0438\u043A\u043E\u0432"
+  highlightMaterial: {fileID: 2100000, guid: 9ddd48c150b3de24fab5ded7f07168fb, type: 2}
   targetCamera: {fileID: 1055258206}
   cameraPosition: {x: -7.484, y: 2.084, z: -4.496}
   cameraRotation: {x: 14.191, y: 124.24, z: -12.321}
@@ -2323,6 +2324,7 @@ MonoBehaviour:
   installationInfo: "\u0422\u0435\u0440\u043C\u043E\u043C\u0435\u0442\u0440, \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u044B\u0439
     \u0434\u043B\u044F \u0438\u0437\u043C\u0435\u0440\u0435\u043D\u0438\u044F \u0442\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u044B
     (\u043D\u0430\u0433\u0440\u0435\u0432\u0430\u043D\u0438\u044F \u043F\u0440\u043E\u0432\u043E\u0434\u043D\u0438\u043A\u0430)"
+  highlightMaterial: {fileID: 2100000, guid: 9ddd48c150b3de24fab5ded7f07168fb, type: 2}
   targetCamera: {fileID: 1055258206}
   cameraPosition: {x: -5.595, y: 1.94, z: -5.924}
   cameraRotation: {x: 62.494, y: 165.589, z: -0.156}
@@ -2881,6 +2883,7 @@ MonoBehaviour:
   - {fileID: 1268911083}
   installationInfo: "\u041E\u043C\u043C\u0435\u0442\u0440, \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u044B\u0439
     \u0434\u043B\u044F \u0438\u0437\u043C\u0435\u0440\u0435\u043D\u0438\u044F \u0441\u043E\u043F\u0440\u043E\u0442\u0438\u0432\u043B\u0435\u043D\u0438\u044F"
+  highlightMaterial: {fileID: 2100000, guid: 9ddd48c150b3de24fab5ded7f07168fb, type: 2}
   targetCamera: {fileID: 1055258206}
   cameraPosition: {x: -8.064, y: 2.038, z: -4.781}
   cameraRotation: {x: 62.494, y: 165.589, z: -0.155}
@@ -3428,6 +3431,7 @@ MonoBehaviour:
   installationInfo: "\u0418\u0437\u043C\u0435\u0440\u044F\u0435\u043C\u044B\u0435
     \u0432 \u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u043E\u043C
     \u043E\u043F\u044B\u0442\u0435 \u043F\u0440\u043E\u0432\u043E\u0434\u043D\u0438\u043A\u0438"
+  highlightMaterial: {fileID: 2100000, guid: 9ddd48c150b3de24fab5ded7f07168fb, type: 2}
   targetCamera: {fileID: 1055258206}
   cameraPosition: {x: 0, y: 0, z: 0}
   cameraRotation: {x: 0, y: 0, z: 0}
@@ -4759,6 +4763,7 @@ MonoBehaviour:
   - {fileID: 1108665082}
   installationInfo: "\u0413\u043E\u0440\u0435\u043B\u043A\u0430, \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u0430\u044F
     \u0434\u043B\u044F \u043D\u0430\u0433\u0440\u0435\u0432\u0430\u043D\u0438\u044F"
+  highlightMaterial: {fileID: 2100000, guid: 9ddd48c150b3de24fab5ded7f07168fb, type: 2}
   targetCamera: {fileID: 1055258206}
   cameraPosition: {x: -6.706, y: 1.774, z: -4.5}
   cameraRotation: {x: 44.881, y: 168.343, z: 7.223}

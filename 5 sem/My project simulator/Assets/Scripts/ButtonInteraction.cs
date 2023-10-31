@@ -8,7 +8,7 @@ public class ButtonInteraction : MonoBehaviour
     [SerializeField] private GameObject[] installationElements; 
     [SerializeField] private string installationInfo;
 
-    private Material highlightMaterial;
+    [SerializeField] private Material highlightMaterial;
     private Material[] originalMaterials;
 
     [SerializeField] private Transform targetCamera;
