@@ -1,8 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
 
-public class ButtonInteraction : MonoBehaviour
+public class ButtonInteraction : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] private TMP_Text infoText;
     [SerializeField] private GameObject[] installationElements; 
@@ -14,6 +15,9 @@ public class ButtonInteraction : MonoBehaviour
     [SerializeField] private Transform targetCamera;
     [SerializeField] private Vector3 cameraPosition;
     [SerializeField] private Vector3 cameraRotation;
+
+    bool isMoving = false;
+    float moveSpeed = 7f;
 
     private void Start()
     {
@@ -27,7 +31,24 @@ public class ButtonInteraction : MonoBehaviour
         }
     }
 
-    public void OnPointerEnter()
+    private void Update()
+    {
+        if (isMoving)
+        {
+            Vector3 newPosition = Vector3.Lerp(targetCamera.position, cameraPosition, moveSpeed * Time.deltaTime);
+            Quaternion newRotation = Quaternion.Slerp(targetCamera.rotation, Quaternion.Euler(cameraRotation), moveSpeed * Time.deltaTime);
+
+            targetCamera.position = newPosition;
+            targetCamera.rotation = newRotation;
+
+            if (Vector3.Distance(targetCamera.position, cameraPosition) < 0.01f && Quaternion.Angle(targetCamera.rotation, Quaternion.Euler(cameraRotation)) < 0.01f)
+            {
+                isMoving = false;
+            }
+        }
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
     {
         infoText.text = installationInfo;
         foreach (var element in installationElements)
@@ -36,7 +57,7 @@ public class ButtonInteraction : MonoBehaviour
         }
     }
 
-    public void OnPointerExit()
+    public void OnPointerExit(PointerEventData eventData)
     {
         int index = 0;
         foreach (var element in installationElements)
@@ -49,7 +70,9 @@ public class ButtonInteraction : MonoBehaviour
 
     public void OnPointerClick()
     {
-        targetCamera.position = cameraPosition;
-        targetCamera.rotation = Quaternion.Euler(cameraRotation);
+        if (!isMoving)
+        {
+            isMoving = true;
+        }
     }
 }

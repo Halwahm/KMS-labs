@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -10,9 +8,29 @@ public class PopupViewController : MonoBehaviour, IPointerEnterHandler, IPointer
     [SerializeField] private Vector3 cameraPosition;
     [SerializeField] private Vector3 cameraRotation;
 
+    bool isMoving = false;
+    float moveSpeed = 7f;
+
     void Start()
     {
         _view.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if (isMoving)
+        {
+            Vector3 newPosition = Vector3.Lerp(targetCamera.position, cameraPosition, moveSpeed * Time.deltaTime);
+            Quaternion newRotation = Quaternion.Slerp(targetCamera.rotation, Quaternion.Euler(cameraRotation), moveSpeed * Time.deltaTime);
+
+            targetCamera.position = newPosition;
+            targetCamera.rotation = newRotation;
+
+            if (Vector3.Distance(targetCamera.position, cameraPosition) < 0.01f && Quaternion.Angle(targetCamera.rotation, Quaternion.Euler(cameraRotation)) < 0.01f)
+            {
+                isMoving = false; 
+            }
+        }
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -27,7 +45,10 @@ public class PopupViewController : MonoBehaviour, IPointerEnterHandler, IPointer
 
     public void OnPointerClick()
     {
-        targetCamera.position = cameraPosition;
-        targetCamera.rotation = Quaternion.Euler(cameraRotation);
+        if (!isMoving)
+        {
+            isMoving = true;
+        }
     }
+
 }
