@@ -36,7 +36,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 7
-    m_ConditionEvent: ChosenCond
+    m_ConditionEvent: MetalIs
     m_EventTreshold: 2
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -4425853938812943792}
@@ -115,7 +115,7 @@ AnimatorController:
   m_Name: Iron
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: ChosenCond
+  - m_Name: MetalIs
     m_Type: 3
     m_DefaultFloat: 0
     m_DefaultInt: 3
@@ -143,7 +143,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 6
-    m_ConditionEvent: ChosenCond
+    m_ConditionEvent: MetalIs
     m_EventTreshold: 2
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -5634428604919366798}
@@ -168,7 +168,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 6
-    m_ConditionEvent: ChosenCond
+    m_ConditionEvent: MetalIs
     m_EventTreshold: 2
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -5634428604919366798}

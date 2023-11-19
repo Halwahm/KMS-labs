@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 38447613}
   - component: {fileID: 38447614}
   m_Layer: 0
-  m_Name: Iron
+  m_Name: Fe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -648,8 +648,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 215aa239c4306e949b418391ab862e03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  taskPanel: {fileID: 1062992572}
-  tasks: {fileID: 1634140599}
+  table: {fileID: 747087896}
+  _tasks: {fileID: 1634140599}
 --- !u!1 &131321202
 GameObject:
   m_ObjectHideFlags: 0
@@ -911,8 +911,7 @@ MonoBehaviour:
   - {fileID: 6466993318088520145}
   - {fileID: 3903539801025750312}
   - {fileID: 2819605050116394465}
-  installationInfo: "\u0421\u0442\u043E\u0439\u043A\u0430, \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u0430\u044F
-    \u0434\u043B\u044F \u043A\u0440\u0435\u043F\u043B\u0435\u043D\u0438\u044F \u043F\u0440\u043E\u0432\u043E\u0434\u043D\u0438\u043A\u043E\u0432"
+  _aboutInst: 
   highlightMaterial: {fileID: 2100000, guid: 1fe2f23ec8a561c4c8ae27e91bef7ed8, type: 2}
   targetCamera: {fileID: 1055258206}
   cameraPosition: {x: -7.484, y: 2.084, z: -4.496}
@@ -1285,7 +1284,7 @@ GameObject:
   - component: {fileID: 174550075}
   m_Layer: 5
   m_Name: D6
-  m_TagString: Untagged
+  m_TagString: Density
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2616,7 +2615,7 @@ GameObject:
   - component: {fileID: 459615212}
   m_Layer: 5
   m_Name: D5
-  m_TagString: Untagged
+  m_TagString: Density
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2717,8 +2716,8 @@ MonoBehaviour:
   _turnOn: {fileID: 474781150}
   _arrowAnimator: {fileID: 1622208748}
   fire: {fileID: 2041788963}
-  OhmmetrText: {fileID: 449184835}
-  currentState: 0
+  _ohmmetrText: {fileID: 449184835}
+  burnerState: 0
 --- !u!65 &474781155
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3752,7 +3751,7 @@ GameObject:
   - component: {fileID: 702304772}
   m_Layer: 5
   m_Name: D2
-  m_TagString: Untagged
+  m_TagString: Density
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4183,7 +4182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d2d707664c715c4389573624ff7cae6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resAndTempCount: 6
+  fill: 6
   table: {fileID: 747087896}
   showTable: {fileID: 1645175999}
 --- !u!1 &748631947
@@ -4952,9 +4951,7 @@ MonoBehaviour:
   infoText: {fileID: 1767667051}
   installationElements:
   - {fileID: 7558993515239924096}
-  installationInfo: "\u0422\u0435\u0440\u043C\u043E\u043C\u0435\u0442\u0440, \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u044B\u0439
-    \u0434\u043B\u044F \u0438\u0437\u043C\u0435\u0440\u0435\u043D\u0438\u044F \u0442\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u044B
-    (\u043D\u0430\u0433\u0440\u0435\u0432\u0430\u043D\u0438\u044F \u043F\u0440\u043E\u0432\u043E\u0434\u043D\u0438\u043A\u0430)"
+  _aboutInst: 
   highlightMaterial: {fileID: 2100000, guid: 1fe2f23ec8a561c4c8ae27e91bef7ed8, type: 2}
   targetCamera: {fileID: 1055258206}
   cameraPosition: {x: -5.595, y: 1.94, z: -5.924}
@@ -5163,11 +5160,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 940bcc1a42457ea4996c9d9aaaf53e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentConductor: 0
-  taskPanel: {fileID: 1062992572}
-  leadAnimation: {fileID: 899718979}
-  aluminiumAnimation: {fileID: 281597256}
-  ironAnimation: {fileID: 38447613}
+  currMetall: 0
+  _taskPanel: {fileID: 1062992572}
+  _swinAnimation: {fileID: 899718979}
+  _aluminiumAnimation: {fileID: 281597256}
+  _feAnimation: {fileID: 38447613}
 --- !u!1 &905498369
 GameObject:
   m_ObjectHideFlags: 0
@@ -6055,6 +6052,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e78e535e75c1324585cb85cd2f2896e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selectedCondText: {fileID: 2039201883}
 --- !u!1 &1103319614
 GameObject:
   m_ObjectHideFlags: 0
@@ -6620,8 +6618,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9418acfa2fe1b747850b730e06056ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isAddButtonClicked: 0
-  tasks: {fileID: 1634140599}
 --- !u!1 &1153971286
 GameObject:
   m_ObjectHideFlags: 0
@@ -6770,8 +6766,7 @@ MonoBehaviour:
   - {fileID: 267144680084351538}
   - {fileID: 832025393138514215}
   - {fileID: 3688204615580256734}
-  installationInfo: "\u041E\u043C\u043C\u0435\u0442\u0440, \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u044B\u0439
-    \u0434\u043B\u044F \u0438\u0437\u043C\u0435\u0440\u0435\u043D\u0438\u044F \u0441\u043E\u043F\u0440\u043E\u0442\u0438\u0432\u043B\u0435\u043D\u0438\u044F"
+  _aboutInst: 
   highlightMaterial: {fileID: 2100000, guid: 1fe2f23ec8a561c4c8ae27e91bef7ed8, type: 2}
   targetCamera: {fileID: 1055258206}
   cameraPosition: {x: -8.064, y: 2.038, z: -4.781}
@@ -8132,9 +8127,7 @@ MonoBehaviour:
   - {fileID: 281597252}
   - {fileID: 38447609}
   - {fileID: 7740882202211828175}
-  installationInfo: "\u0418\u0437\u043C\u0435\u0440\u044F\u0435\u043C\u044B\u0435
-    \u0432 \u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u043E\u043C
-    \u043E\u043F\u044B\u0442\u0435 \u043F\u0440\u043E\u0432\u043E\u0434\u043D\u0438\u043A\u0438"
+  _aboutInst: 
   highlightMaterial: {fileID: 2100000, guid: 1fe2f23ec8a561c4c8ae27e91bef7ed8, type: 2}
   targetCamera: {fileID: 1055258206}
   cameraPosition: {x: 0, y: 0, z: 0}
@@ -9532,8 +9525,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dc04d8e1a9b11b468de8ab1e261196d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundTaskText: {fileID: 1560175294}
+  practicePanel: {fileID: 652228030}
+  taskPanel: {fileID: 1062992568}
+  taskNowTxt: {fileID: 1560175294}
+  _newValue: {fileID: 1132751738}
+  burner: {fileID: 474781152}
+  _ohmmetr: {fileID: 2106669967}
+  _metallsAnimCl: {fileID: 899718983}
   table: {fileID: 747087900}
+  _clearButton: {fileID: 128837899}
   state: 0
 --- !u!114 &1634140600
 MonoBehaviour:
@@ -10900,7 +10900,7 @@ GameObject:
   - component: {fileID: 1851999007}
   m_Layer: 5
   m_Name: D1
-  m_TagString: Untagged
+  m_TagString: Density
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11739,8 +11739,7 @@ MonoBehaviour:
   - {fileID: 2448437450337709014}
   - {fileID: 6865438815063210845}
   - {fileID: 4704743815956178409}
-  installationInfo: "\u0413\u043E\u0440\u0435\u043B\u043A\u0430, \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u0430\u044F
-    \u0434\u043B\u044F \u043D\u0430\u0433\u0440\u0435\u0432\u0430\u043D\u0438\u044F"
+  _aboutInst: 
   highlightMaterial: {fileID: 2100000, guid: 1fe2f23ec8a561c4c8ae27e91bef7ed8, type: 2}
   targetCamera: {fileID: 1055258206}
   cameraPosition: {x: -6.706, y: 1.774, z: -4.5}
@@ -12252,7 +12251,7 @@ GameObject:
   - component: {fileID: 2004222381}
   m_Layer: 5
   m_Name: D3
-  m_TagString: Untagged
+  m_TagString: Density
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13476,7 +13475,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _turnOn: {fileID: 2106669965}
-  OhmmetrText: {fileID: 449184835}
+  _ohmmetrText: {fileID: 449184835}
+  ohmmetrState: 0
 --- !u!1 &2110119313
 GameObject:
   m_ObjectHideFlags: 0
@@ -13939,7 +13939,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2143404125}
   m_Layer: 0
-  m_Name: Conductors
+  m_Name: Metalls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13975,7 +13975,7 @@ GameObject:
   - component: {fileID: 2143965038}
   m_Layer: 5
   m_Name: D4
-  m_TagString: Untagged
+  m_TagString: Density
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16610,7 +16610,7 @@ GameObject:
   - component: {fileID: 899718979}
   - component: {fileID: 899718983}
   m_Layer: 0
-  m_Name: Lead
+  m_Name: Swinez
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

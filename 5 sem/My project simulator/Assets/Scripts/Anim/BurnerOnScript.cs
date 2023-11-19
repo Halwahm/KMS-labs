@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class BurnerOnScript : MonoBehaviour
 {
@@ -12,7 +11,7 @@ public class BurnerOnScript : MonoBehaviour
     [SerializeField] private GameObject fire;
     private ParticleSystem ps;
 
-    [SerializeField] private TMP_Text OhmmetrText;
+    [SerializeField] private TMP_Text _ohmmetrText;
 
     private float randomValueSmall;
     private float randomValueBig;
@@ -37,14 +36,14 @@ public class BurnerOnScript : MonoBehaviour
 
     public enum BurnerState
     {
-        Off = 12,
-        Full = 90
+        Off,
+        On
     };
-    public BurnerState currentState/*, prevState*/;
+    public BurnerState burnerState;
     private void Awake()
     {
         ps = fire.GetComponent<ParticleSystem>();
-        currentState = BurnerState.Off;
+        burnerState = BurnerState.Off;
         DeactivateFire();
     }
 
@@ -67,26 +66,24 @@ public class BurnerOnScript : MonoBehaviour
 
         isClicked = !isClicked;
         if (isClicked)
-            OhmmetrText.text = randomValueBig.ToString("F3");
+            _ohmmetrText.text = randomValueBig.ToString("F3");
         else
-            OhmmetrText.text = randomValueSmall.ToString("F3");
+            _ohmmetrText.text = randomValueSmall.ToString("F3");
 
         if (_arrowAnimator != null)
         {
             _arrowAnimator.StopPlayback();
         }
 
-        switch (currentState)
+        switch (burnerState)
         {
             case BurnerState.Off:
-                //prevState = currentState;
-                currentState = BurnerState.Full;
+                burnerState = BurnerState.On;
                 ActivateFire();
             break;
 
-            case BurnerState.Full:
-                //prevState = currentState;
-                currentState = BurnerState.Off;
+            case BurnerState.On:
+                burnerState = BurnerState.Off;
                 DeactivateFire();
                 if (_arrowAnimator != null)
                 {

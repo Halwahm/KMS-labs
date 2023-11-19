@@ -7,7 +7,7 @@ public class ButtonInteraction : MonoBehaviour, IPointerEnterHandler, IPointerEx
 {
     [SerializeField] private TMP_Text infoText;
     [SerializeField] private GameObject[] installationElements; 
-    [SerializeField] private string installationInfo;
+    [SerializeField] private string _aboutInst;
 
     [SerializeField] private Material highlightMaterial;
     private Material[] originalMaterials;
@@ -41,7 +41,8 @@ public class ButtonInteraction : MonoBehaviour, IPointerEnterHandler, IPointerEx
             targetCamera.position = newPosition;
             targetCamera.rotation = newRotation;
 
-            if (Vector3.Distance(targetCamera.position, cameraPosition) < 0.01f && Quaternion.Angle(targetCamera.rotation, Quaternion.Euler(cameraRotation)) < 0.01f)
+            if (Vector3.Distance(targetCamera.position, cameraPosition) < 0.01f && 
+                Quaternion.Angle(targetCamera.rotation, Quaternion.Euler(cameraRotation)) < 0.01f)
             {
                 isMoving = false;
             }
@@ -50,7 +51,7 @@ public class ButtonInteraction : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        infoText.text = installationInfo;
+        infoText.text = _aboutInst;
         foreach (var element in installationElements)
         {
             element.GetComponent<Renderer>().material = highlightMaterial;

@@ -6,7 +6,6 @@ using UnityEngine.EventSystems;
 public class ShowTable : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] internal GameObject _table;
-
     private bool isTableActive = false;
 
     void Start()

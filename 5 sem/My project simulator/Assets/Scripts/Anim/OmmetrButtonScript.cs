@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -7,13 +5,25 @@ public class OmmetrButtonScript : MonoBehaviour
 {
     public Animator _turnOn;
     private bool isClicked = false;
-    [SerializeField] private TMP_Text OhmmetrText;
+    [SerializeField] private TMP_Text _ohmmetrText;
+
+    public enum OhmmetrState
+    {
+        Off,
+        On
+    };
+    public OhmmetrState ohmmetrState;
 
     private float randomValueSmall;
 
     void Start()
     {
         _turnOn = GetComponent<Animator>();
+    }
+
+    private void Awake()
+    {
+        ohmmetrState = OhmmetrState.Off;
     }
 
     private void Update()
@@ -29,8 +39,19 @@ public class OmmetrButtonScript : MonoBehaviour
         isClicked = !isClicked;
 
         if (isClicked)
-            OhmmetrText.text = randomValueSmall.ToString("F3");
+            _ohmmetrText.text = randomValueSmall.ToString("F3");
         else
-            OhmmetrText.text = "";
+            _ohmmetrText.text = "";
+
+        switch (ohmmetrState)
+        {
+            case OhmmetrState.Off:
+                ohmmetrState = OhmmetrState.On;
+                break;
+
+            case OhmmetrState.On:
+                ohmmetrState = OhmmetrState.Off;
+                break;
+        }
     }
 }

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public partial class Tasks : MonoBehaviour, IPointerClickHandler/*, IPointerEnterHandler*/
+public partial class Tasks : MonoBehaviour, IPointerClickHandler
 {
     internal enum TasksNums
     {

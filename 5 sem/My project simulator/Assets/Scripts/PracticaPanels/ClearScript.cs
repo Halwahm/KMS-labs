@@ -4,25 +4,44 @@ using UnityEngine.UI;
 
 public class ClearScript : MonoBehaviour, IPointerClickHandler
 {
-    internal GameObject table;
-    private GameObject[] tableCellsT, TableCellsR;
-    public TaskPanel taskPanel;
-    public Tasks tasks;
+    [SerializeField] internal GameObject table;
+    private GameObject[] _tempCells, _resistCells, _densCells;
+    [SerializeField] private Tasks _tasks;
 
     private void Awake()
     {
-        table = GameObject.Find("Table");
-        tableCellsT = GameObject.FindGameObjectsWithTag("Temperature");
-        TableCellsR = GameObject.FindGameObjectsWithTag("Resistance");
+        _tempCells = GameObject.FindGameObjectsWithTag("Temperature");
+        _resistCells = GameObject.FindGameObjectsWithTag("Resistance");
+        _densCells = GameObject.FindGameObjectsWithTag("Density");
     }
+
     public void OnPointerClick(PointerEventData eventData)
     {
-        for (int i = 0; i < TableCellsR.Length; i++)
+        foreach (GameObject tempCell in _tempCells)
         {
-            tableCellsT[i].GetComponent<Text>().text = "-";
-            TableCellsR[i].GetComponent<Text>().text = "-";
-            tasks.state = Tasks.States.Started;
-            tasks.currentTask = Tasks.TasksNums.NULL;
+            if (tempCell.TryGetComponent<Text>(out var tempText))
+            {
+                tempText.text = "-";
+            }
         }
+
+        foreach (GameObject resistCell in _resistCells)
+        {
+            if (resistCell.TryGetComponent<Text>(out var resistText))
+            {
+                resistText.text = "-";
+            }
+        }
+
+        foreach (GameObject densCell in _densCells)
+        {
+            if (densCell.TryGetComponent<Text>(out var densText))
+            {
+                densText.text = "-";
+            }
+        }
+
+        _tasks.state = Tasks.States.Started;
+        _tasks.currentTask = Tasks.TasksNums.NULL;
     }
 }
