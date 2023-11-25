@@ -1,0 +1,160 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  header {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #337ab7;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav ul li {
+    margin-bottom: 10px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+
+a {
+  text-decoration: none;
+  color: #337ab7;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #ff6600; 
+}
+
+header {
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Стили для h1 */
+header h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header nav a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.author-info {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.author-info img {
+  width: 200px; 
+  border-radius: 50px; 
+  margin: 20px 0;
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  margin-right: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+  header {
+      padding: 10px;
+  }
+
+  nav a {
+      display: block;
+      margin: 10px 0;
+  }
+
+  main {
+      padding: 10px;
+  }
+
+  section {
+      margin-bottom: 20px;
+  }
+}
+
+/* Основные стили для изображений */
+section img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Фиксированный размер для изображений в блоках */
+section img {
+  max-width: 300px; /* Задайте фиксированную максимальную ширину */
+  height: auto;
+}
+
+section img:hover {
+  transform: scale(1.1);
+}
+
+.image-block {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.image-block img {
+  width: calc(33.33% - 20px); /* Ширина каждого изображения с учетом отступов */
+  max-width: 300px; /* Максимальная ширина каждого изображения */
+  height: auto;
+  margin: 10px;
+}
+
+.image-block img:hover {
+  transform: scale(1.1);
+}
