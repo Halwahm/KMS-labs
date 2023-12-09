@@ -4,16 +4,23 @@ body {
     padding: 0;
     background-size: cover;
     background-repeat: no-repeat;
+    margin-top: 100px;
   }
   
   header {
     text-align: center;
-    padding: 20px;
     background-color: rgba(255, 255, 255, 0.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
   }
-  
-  h1 {
-    margin: 0;
+
+  h2, p {
+    margin-left: 15px;
+  }
+
+  p {
+    font-size: 20px;
   }
   
   .btn {
@@ -58,7 +65,6 @@ header {
   text-align: center;
 }
 
-/* Стили для h1 */
 header h1 {
   font-size: 28px;
   margin-bottom: 20px;
@@ -89,7 +95,7 @@ header nav a:hover {
 }
 
 .author-info img {
-  width: 200px; 
+  width: 300px; 
   border-radius: 50px; 
   margin: 20px 0;
 }
@@ -122,7 +128,6 @@ header nav a:hover {
   }
 }
 
-/* Основные стили для изображений */
 section img {
   width: 100%;
   height: auto;
@@ -131,9 +136,8 @@ section img {
   transition: transform 0.3s ease-in-out;
 }
 
-/* Фиксированный размер для изображений в блоках */
 section img {
-  max-width: 300px; /* Задайте фиксированную максимальную ширину */
+  max-width: 300px; 
   height: auto;
 }
 
@@ -143,18 +147,22 @@ section img:hover {
 
 .image-block {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 .image-block img {
-  width: calc(33.33% - 20px); /* Ширина каждого изображения с учетом отступов */
-  max-width: 300px; /* Максимальная ширина каждого изображения */
+  width: calc(50% - 20px);
+  max-width: 400px;
   height: auto;
   margin: 10px;
 }
 
 .image-block img:hover {
   transform: scale(1.1);
+}
+
+#text {
+  cursor: pointer;
 }
