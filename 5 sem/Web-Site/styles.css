@@ -166,3 +166,158 @@ section img:hover {
 #text {
   cursor: pointer;
 }
+
+
+
+#theory {
+    padding: 50px;
+    text-align: center;
+    margin-top: 80px; 
+}
+
+img{
+    transition: transform 0.3s ease-in-out;
+}
+
+img:hover{
+    transform: scale(1.1);
+}
+
+#theory {
+  padding: 50px;
+  text-align: center;
+  margin-top: 80px; 
+}
+
+img{
+  transition: transform 0.3s ease-in-out;
+}
+
+img:hover{
+  transform: scale(1.1);
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent; /* set to 'transparent' or a specific color */
+  padding: 20px;
+  box-shadow: 100px 40px 80px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+#popup_content {
+  text-align: center;
+}
+
+.popup img {
+  max-width: 100%;
+  height: auto;
+}
+
+.close {
+  cursor: pointer;
+}
+
+#image-container {
+  display: none;
+}
+
+.dialog{
+	position:fixed;
+    top: 3%;
+	left:100%;
+	width:800px;
+	height:704px;
+	margin-left:-50px;
+	margin-top:-20px;
+	padding:10px;
+	border:#f15252 2px solid; 
+	border-radius:10px;
+	background:#e5edc7;
+	color:rgb(0, 0, 0);
+	z-index:1500;
+  font-weight: bold;
+	font-size:12pt;
+}
+
+.dialog .label{
+	transform: rotate(270deg);
+	width:430px;
+	height:20px;
+	text-align:center;
+	color:rgb(0, 0, 0);
+    font-weight: bold;
+    overflow:hidden;
+	display:inline-block;
+	margin-left:-26%;
+	margin-top:40%;
+	cursor:pointer;
+    font-weight: bold;
+}
+
+.dialog .header{
+	text-align:center;
+	margin-top:-350px;
+	font-size:20px;
+    font-weight: bold;
+}
+
+.dialog .history{
+	height: 580px;
+	overflow-x:hidden;
+    overflow-y: scroll;
+}
+
+.dialog input, .dialog button, .dialog .history{
+	margin:2px 25px;
+	width: 95%;
+	border:1px rgb(255, 175, 175) solid;
+	border-radius: 5px;
+	font-size:17px;
+    font-weight: bold;
+}
+.dialog .history .question {
+	margin:5px;
+	width: 90.4%;
+	border-radius: 5px;
+	padding:5px;
+	margin-left:40px;
+	background: #48fabc;
+}
+
+.question-img{
+    transition: transform 0.3s ease-in-out;
+}
+
+.dialog .history .answer{
+	margin:5px;
+	width:95%;
+	border-radius: 5px;
+	padding:5px;	
+	margin-right:40px;
+	background:rgb(80, 223, 231);
+
+}
+.dialog .history .answer img, .dialog .history .answer video {
+	cursor: pointer;
+	display: block;
+	max-width: 650px;
+    margin-top: 10px;
+}
+
+.dialog .history .answer audio{
+    margin-top: 15px;
+}
+
+.button-quest{
+    padding-top: 8px;
+}
+
+.button-quest1{
+    padding-top: 8px;
+}
+
