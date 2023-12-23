@@ -272,6 +272,10 @@ img:hover{
     overflow-y: scroll;
 }
 
+.dialog input {
+  height: 35px;
+}
+
 .dialog input, .dialog button, .dialog .history{
 	margin:2px 25px;
 	width: 95%;
@@ -314,10 +318,10 @@ img:hover{
 }
 
 .button-quest{
-    padding-top: 8px;
+  /* text-align: center; */
+  padding: 8px;
 }
 
 .button-quest1{
     padding-top: 8px;
 }
-
