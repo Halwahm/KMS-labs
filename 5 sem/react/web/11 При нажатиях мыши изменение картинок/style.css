@@ -1,0 +1,7 @@
+#myImage {
+  transition: width 0.5s, height 0.5s;
+}
+
+#myImage {
+   transition: color blue;
+}

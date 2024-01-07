@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Effect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p>
+        Текст с определенными <span class="word" onmouseover="showImage()" onmouseout="hideImage()">cobain</span>
+    </p>
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrNqBe2kqSKNb565SLhEBQYKKsaN86fnxmVIvi_7rUFw&s" alt="Image" class="hidden-image" id="replacementImage">
+
+    <script>
+      function showImage() {
+    // Заменить слово на рисунок
+    document.querySelector('.word').innerHTML = '';
+    
+    // Показать изображение
+    document.getElementById('replacementImage').style.display = 'block';
+}
+
+function hideImage() {
+    // Восстановить слово
+    document.querySelector('.word').innerHTML = 'cobain';
+    
+    // Скрыть изображение
+    document.getElementById('replacementImage').style.display = 'none';
+}
+    </script>
+</body>
+</html>

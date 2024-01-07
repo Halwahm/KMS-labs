@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+ <img id="myImage" src="https://uznaikak.su/media/images/blog/874.jpg"/>
+ <p id="myText">
+  Драма на выходе
+ </p>
+
+ <script>
+    var myImage = document.getElementById("myImage"); 
+    var myText = document.getElementById("myText");
+
+    
+    myImage.addEventListener("mouseover", function() {
+      myImage.style.width = "200px";
+      myImage.style.height = "200px";
+    });
+
+    myImage.addEventListener("mouseout", function() {
+      myImage.style.width = "100px";
+      myImage.style.height = "100px";
+    });
+ </script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
+
+public class SCRIPT : MonoBehaviour
+{
+    public AudioClip clip;
+
+    private AudioSource audioSource1;
+
+    void Start()
+    {
+        audioSource1 = gameObject.AddComponent<AudioSource>();
+
+        audioSource1.clip = clip;
+
+
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            PlaySound(audioSource1);
+        }
+        
+    }
+
+    void PlaySound(AudioSource audioSource)
+    {
+
+        audioSource.Play();
+    }
+
+
+}

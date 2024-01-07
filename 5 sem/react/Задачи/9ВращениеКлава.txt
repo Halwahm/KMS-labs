@@ -1,0 +1,33 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
+using UnityEngine.UI;   
+
+public class SCRIPT : MonoBehaviour
+{
+
+    public float rotateSpeed = 500f;
+    
+    void Start()
+    {
+
+        
+
+    }
+
+    void Update()
+    {
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+            transform.Rotate (Vector3.up, rotateSpeed * Time.deltaTime);
+        }
+       
+
+    }
+
+    
+
+}

@@ -1264,7 +1264,7 @@ function ask(questionInput){
           document.getElementById("history").scrollHeight;	
   //очистка текстового поля для ввода нового вопроса
   document.getElementById(questionInput).value="";
-  }            
+}            
   
 function clearHistory() {
     var historyDiv = document.getElementById("history");

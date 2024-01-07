@@ -1,0 +1,44 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
+using UnityEngine.UI;   
+
+public class SCRIPT : MonoBehaviour
+{
+
+    private Renderer objectRenderer;
+
+    
+    void Start()
+    {
+
+        objectRenderer = GetComponent<Renderer>();
+
+    }
+
+    void Update()
+    {
+
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit))
+            {
+                ChangeColor();
+            }
+        }
+
+
+    }
+
+    void ChangeColor()
+    {
+        objectRenderer.material.color = UnityEngine.Random.ColorHSV();
+    }
+
+}

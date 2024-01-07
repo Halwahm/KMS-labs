@@ -1,0 +1,32 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
+using UnityEngine.UI;   
+
+public class SCRIPT : MonoBehaviour
+{
+    public GameObject prefub;
+    public float count = 0;
+    void Start()
+    {
+        
+      
+    }
+
+    void Update()
+    {
+
+        if (Input.GetKey(KeyCode.V) && count == 0)
+        {
+            Vector3 position = new Vector3(UnityEngine.Random.Range(-5f, 5f), UnityEngine.Random.Range(1f, 10f), UnityEngine.Random.Range(1f, 10f));
+            Instantiate(prefub, position, Quaternion.identity);
+            count++;
+        }
+
+
+
+    }
+
+}

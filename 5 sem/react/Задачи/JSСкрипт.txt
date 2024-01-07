@@ -1,0 +1,7 @@
+this.stop();
+this.start_but.addEventListener("click",f1.bind(this));
+function f1(args){this.play();}
+this.stop_but.addEventListener("click",f2.bind(this));
+function f2(args){this.stop();}
+this.restart_but.addEventListener("click",f3.bind(this));
+function f3(args){this.gotoAndStop(0);}

@@ -1,0 +1,37 @@
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
+
+public class SCRIPT : MonoBehaviour
+{
+
+    void Start()
+    {
+    }
+
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.D))
+        {
+            transform.Translate(Vector3.back * Time.deltaTime);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("TriggerEnter");
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        Debug.Log("TriggerExit");
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        Debug.Log("triggerStay");
+    }
+
+
+}

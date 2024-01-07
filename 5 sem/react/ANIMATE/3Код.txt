@@ -1,0 +1,19 @@
+stop();
+
+btn.addEventListener(MouseEvent.CLICK,f1);
+function f1(event:MouseEvent):void
+{
+    play();
+}
+
+btn2.addEventListener(MouseEvent.CLICK,f2);
+function f2(event:MouseEvent):void
+{
+    stop();
+}
+
+btn3.addEventListener(MouseEvent.CLICK,f3);
+function f3(event:MouseEvent):void
+{
+    gotoAndStop(0);
+}

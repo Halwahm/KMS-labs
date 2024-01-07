@@ -1,0 +1,33 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
+
+public class btnSc : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+{
+    void Start()
+    {
+        Button button = GetComponent<Button>();
+
+        if (button != null )
+        {
+            button.onClick.AddListener(OnClinck);
+        }
+    }
+
+    void OnClinck ()
+    {
+        Debug.Log("asd");
+    }
+
+    public void OnPointerEnter (PointerEventData eventData)
+    {
+        Debug.Log("Наведен курсор");
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        Debug.Log("Отведен курсор");
+    }
+}

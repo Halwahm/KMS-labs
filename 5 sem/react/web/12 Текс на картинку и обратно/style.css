@@ -1,0 +1,8 @@
+.word:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.hidden-image {
+    display: none;
+}
