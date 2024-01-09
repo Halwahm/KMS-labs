@@ -1,0 +1,33 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
+using UnityEngine.UI;   
+
+public class SCRIPT : MonoBehaviour
+{
+    public AudioClip collisionSound;
+    private AudioSource audioSource;
+    void Start()
+    {
+        audioSource = gameObject.AddComponent<AudioSource>();
+
+        audioSource.clip = collisionSound;
+    }
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.D))
+        {
+            transform.Translate(Vector3.back * 1f * Time.deltaTime);
+        }
+    }
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            audioSource.Play();
+            Debug.Log("asd");
+        }
+    }
+}

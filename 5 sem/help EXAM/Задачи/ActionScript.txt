@@ -1,0 +1,18 @@
+stop();
+
+start_but.addEventListener(MouseEvent.CLICK, f1);
+stop_but.addEventListener(MouseEvent.CLICK, f2);
+restart_but.addEventListener(MouseEvent.CLICK, f3);
+
+function f1(event: MouseEvent){
+play();
+}
+
+function f2(event: MouseEvent){
+stop();
+}
+
+function f3(event: MouseEvent){
+gotoAndStop(1);
+play();
+}

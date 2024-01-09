@@ -1,0 +1,37 @@
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
+
+public class SCRIPT : MonoBehaviour
+{
+
+    public float rotationAngle = 0f;
+    public float rotationSpeed = 400f;
+
+
+    void Start()
+    {
+
+    }
+
+
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.V))
+        {
+            Quat(true);
+        }
+    }
+
+    void Quat (bool isTrue)
+    {
+        float deltaAngle = rotationSpeed * Time.deltaTime * (isTrue ? 1f : -1f);
+
+        rotationAngle += deltaAngle;
+
+        Quaternion QUATERNION = Quaternion.Euler(0f, rotationAngle, 0f);
+
+        transform.rotation = QUATERNION;
+    }
+}

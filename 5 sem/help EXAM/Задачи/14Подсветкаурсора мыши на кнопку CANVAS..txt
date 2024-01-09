@@ -1,0 +1,20 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
+
+public class btnSc : MonoBehaviour
+{
+
+    public void Change1()
+    {
+        gameObject.GetComponent<Renderer>().material.color = Color.red;
+    }
+    public void Change2()
+    {
+        gameObject.GetComponent<Renderer>().material.color = Color.blue;
+    }
+
+}
