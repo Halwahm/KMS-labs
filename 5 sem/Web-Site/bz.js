@@ -990,7 +990,7 @@ const knowledge = [
             {
                 return str.substring(0, 1).toLowerCase() + str.substring(1);
             }
-
+            
             //Функция, которая делает первую букву в тексте большой:
             function firstSymbolToUpperCase(str)
             {
@@ -1105,7 +1105,7 @@ const knowledge = [
               let answers = [];
               let div = document.createElement('div');
     
-              for (let i = 0; i < questions.length; i++) 
+              for(let i = 0; i < questions.length; i++) 
               {
                 let userQuestion = questions[i]; 
                 let answer = getAnswer(userQuestion);
